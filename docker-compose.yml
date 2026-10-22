@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    image: delivery-app:v1
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+    volumes:
+      - ./data:/app/data
+  redis:
+    image: redis:7-alpine
+    container_name: redis-server
+    volumes:
+      - redis-data:/data
+volumes:
+  redis-data:
