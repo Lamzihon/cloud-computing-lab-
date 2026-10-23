@@ -165,10 +165,4 @@ def health():
     return "OK", 200
 
 if __name__ == '__main__':
-<<<<<<< HEAD
-    # 0.0.0.0 让 docker/k8s 外部能访问
-
-    app.run(host="0.0.0.0", port=5000)
-=======
     app.run(host='0.0.0.0', port=5000)
->>>>>>> 0315597 (fix app.py v2)
