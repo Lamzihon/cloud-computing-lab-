@@ -191,4 +191,5 @@ def healthz():
 
 if __name__ == '__main__':
     # 0.0.0.0 让 docker/k8s 外部能访问
-    app.run(host='0.0.0.0', port=5000, debug=True)
+
+    app.run(host="0.0.0.0", port=5000)
